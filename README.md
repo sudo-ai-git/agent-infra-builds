@@ -36,6 +36,15 @@ into false fails (and vice-versa). I documented one such unverified bug publicly
 you've shipped an eval harness, a 3-day audit is cheap insurance against
 publishing (or hiring against) a wrong number.
 
+**Same forensics, applied to config/environment integrity:** the audit muscle
+also catches silent mis-reading of env-var vs CLI defaults. Live contributions
+in review — [`redis/mcp-redis#175`](https://github.com/redis/mcp-redis/pull/175)
+(fix for [redis/mcp-redis#156](https://github.com/redis/mcp-redis/issues/156)):
+CLI `--host/--port/--db` defaults silently overrode `REDIS_*` env vars, so the
+env config was ignored. Alongside [`promptfoo#10525`](https://github.com/promptfoo/promptfoo/pull/10525)
+and [`graphiti#1805`](https://github.com/getzep/graphiti/pull/1805) covering env
+pass-through and config-path precedence in two more major tools.
+
 ## What you get (the honest part)
 
 Every delivered connector ships with an *end-to-end test that drives the real MCP
