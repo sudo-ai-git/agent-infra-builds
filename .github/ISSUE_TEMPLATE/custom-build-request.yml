@@ -14,11 +14,23 @@ body:
         `mcp-benchmark-hygiene`, and a documented benchmark-forensics finding
         (`vulcanbench-findings`).
 
+  - type: dropdown
+    id: engagement
+    attributes:
+      label: "Which engagement type?"
+      options:
+        - "MCP connector (internal system → agent-reachable)"
+        - "Connector + hosted endpoint + support"
+        - "Agent verification layer (verify-claim + benchmark-hygiene)"
+        - "Agent-eval harness audit (silent mis-scoring / config-leakage)"
+        - "Not sure — help me scope it"
+    validations:
+      required: true
   - type: textarea
     id: system
     attributes:
-      label: "What internal system do you want agent-reachable?"
-      description: "e.g. our fleet DB (Postgres), the legal case-management API (Clio), the ops telemetry store (Prometheus)."
+      label: "What internal system do you want agent-reachable (or harness to audit)?"
+      description: "e.g. our fleet DB (Postgres), the legal case-management API (Clio), the ops telemetry store (Prometheus), or our CI agent-eval grading."
       placeholder: "We want our coding agent to query the ops telemetry store..."
     validations:
       required: true

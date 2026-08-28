@@ -23,9 +23,17 @@ with a **fixed price band** — no commitment.
 | **MCP connector** | one internal system → agent-reachable (auth, logging, 3–5 tools, security-scan pass) | $8K–$25K | 2–3 wks |
 | **Connector + hosted** | above, plus hosted Streamable-HTTP endpoint + monitoring + 30-day support | $15K–$40K | 3–4 wks |
 | **Agent verification layer** | wire `verify-claim` + `benchmark-hygiene` into your agent/test harness | $5K–$20K | 1–2 wks |
+| **Agent-eval harness audit** | audit your agent-benchmark/CI grading for silent mis-scoring, config-leakage, and false pass/fail (the class of bug I found in VulcanBench — a repo-root `--cov` leak scored every functional task 0.0) | $2K–$8K | 3–5 days |
 
 Billing: 40% kickoff / 60% acceptance. HIPAA / SOC 2 note if it applies — handled
 with care.
+
+**Why the harness audit is worth it before you trust a leaderboard:** automated
+agent-eval harnesses routinely inherit host pytest config that turns real passes
+into false fails (and vice-versa). I documented one such unverified bug publicly
+([vulcanbench-findings](https://sudo-ai-git.github.io/vulcanbench-findings/)) — if
+you've shipped an eval harness, a 3-day audit is cheap insurance against
+publishing (or hiring against) a wrong number.
 
 ## What you get (the honest part)
 
