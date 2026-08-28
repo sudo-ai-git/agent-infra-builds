@@ -10,6 +10,7 @@ price, milestone-billed. Public, MIT, E2E-tested reference assets:
 | [`mcp-benchmark-hygiene`](https://github.com/sudo-ai-git/mcp-benchmark-hygiene) | detect pytest config-leakage corrupting agent-eval | `uv tool install git+https://github.com/sudo-ai-git/mcp-benchmark-hygiene` |
 | [`harness-audit`](https://github.com/sudo-ai-git/harness-audit) | zero-dependency CLI: audit an agent-eval/CI workspace for the silent mis-scoring bug class | `uvx --from git+https://github.com/sudo-ai-git/harness-audit harness-audit <path>` |
 | [`cov-shield`](https://github.com/sudo-ai-git/cov-shield) | zero-dependency CLI: run pytest *with* repo-root addopts/coverage-gate leakage neutralized — the fixer companion to harness-audit | `uv tool install git+https://github.com/sudo-ai-git/cov-shield` |
+| [`env-precedence-check`](https://github.com/sudo-ai-git/env-precedence-check) | zero-dependency CLI: detect CLI-default-silently-overrides-env-var bugs (the redis#156/graphiti#1805/promptfoo#10525 pattern) | `uv tool install git+https://github.com/sudo-ai-git/env-precedence-check` |
 | [`vulcanbench-findings`](https://github.com/sudo-ai-git/vulcanbench-findings) | documented benchmark-harness mis-scoring bug | [Pages](https://sudo-ai-git.github.io/vulcanbench-findings/) |
 
 ## How to hire
