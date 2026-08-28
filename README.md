@@ -12,6 +12,7 @@ price, milestone-billed. Public, MIT, E2E-tested reference assets:
 | [`cov-shield`](https://github.com/sudo-ai-git/cov-shield) | zero-dependency CLI: run pytest *with* repo-root addopts/coverage-gate leakage neutralized — the fixer companion to harness-audit | `uv tool install git+https://github.com/sudo-ai-git/cov-shield` |
 | [`env-precedence-check`](https://github.com/sudo-ai-git/env-precedence-check) | zero-dependency CLI: detect CLI-default-silently-overrides-env-var bugs (the redis#156/graphiti#1805/promptfoo#10525 pattern) | `uv tool install git+https://github.com/sudo-ai-git/env-precedence-check` |
 | [`mcp-schema-lint`](https://github.com/sudo-ai-git/mcp-schema-lint) | zero-dependency CLI: validate MCP `server.json` + `tools/list` against the Official Registry schema (desc≤100, ownership line, transports, tool names/types) | `uv tool install git+https://github.com/sudo-ai-git/mcp-schema-lint` |
+| [`ci-diff-audit`](https://github.com/sudo-ai-git/ci-diff-audit) | zero-dependency CLI: audit what a pipeline changed vs declared intent — catch unintended side-effect diffs | `uv tool install git+https://github.com/sudo-ai-git/ci-diff-audit` |
 | [`vulcanbench-findings`](https://github.com/sudo-ai-git/vulcanbench-findings) | documented benchmark-harness mis-scoring bug | [Pages](https://sudo-ai-git.github.io/vulcanbench-findings/) |
 
 ## How to hire
